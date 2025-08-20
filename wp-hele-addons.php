@@ -19,8 +19,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('${7/[- ]/_/gi|upper}_PATH', plugin_dir_path(__FILE__));
-define('${7/[- ]/_/gi|upper}_URL', plugin_dir_url(__FILE__));
+
 
 
 
