@@ -11,25 +11,26 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: plugin-textdomain
  * Domain Path: /languages
+ * Requires Plugins:  elementor
  */
+
+namespace Hasan\HeleAddons;
+
 
 // Exit if accessed directly.
 if (!defined('ABSPATH')) {
     exit;
 }
 
-// Define plugin constants
 
 
 
+if (!class_exists(HeleAddons::class && is_readable(__DIR__ . '/vendor/autoload.php'))) {
+    require_once __DIR__ . '/vendor/autoload.php';
 
-if (file_exists(plugin_dir_path(__FILE__) . 'includes/HeleAddons.php')) {
-    include_once plugin_dir_path(__FILE__) . 'includes/HeleAddons.php';
 }
 
-$hele_addons = new HeleAddons();
-
-$hele_addons->init();
+class_exists(HeleAddons::class) && HeleAddons::instance()->init();
 
 
 /**
